@@ -1,0 +1,33 @@
+{% extends "AppEntrega1/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2>Búsqueda de salones</h2>
+
+                        <p class="lead">Puedes buscar todos los salones en la ciudad donde te encuentres.</p>
+                        
+                        <form action="buscar/" method="GET">
+                            <input name="ciudad" id="ciudad">
+                            <input type="submit"value="Buscar">
+                        </form>
+                        
+
+                        
+
+                        
+                    </ul>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+{% endblock%}

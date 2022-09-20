@@ -1,0 +1,36 @@
+{% extends "AppEntrega1/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2>Luna de miel</h2>
+                        <p class="lead">Por favor, ingrese el destino de su preferencia.</p>
+
+                        {% if LunaDeMielFormulario.errors %}
+
+                        <p class="mb-0">Están mal los datos, revisar.</p>
+
+                        {% endif %}
+
+                        <form action="" method="POST">{% csrf_token %}
+                            <table>
+                                {{ LunaDeMielFormulario.as_table }}
+                            </table>
+                            
+                            <input type="submit",value="Enviar">
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+{% endblock%}
